@@ -47,5 +47,4 @@ function TypingEffect({ text, speed = 100 }) {
     return <span ref={ref}>{displayedText}<span className="typing-cursor">|</span></span>;
   }
 
-
 export default TypingEffect
