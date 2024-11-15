@@ -1,0 +1,49 @@
+* {
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  background-color: #151515;
+  width: 100vw;
+}
+
+#head {
+  z-index: 0;
+}
+
+#head-img {
+  width: 100vw;
+  transform: translate(0, -50%);
+}
+
+#content {
+  background-color: #242424;
+  min-height: 300vh;
+  margin-top: 25vh;
+  width: 60vw;
+  z-index: 1;
+}
+
+#name-header {
+  font-size: 5rem;
+}
+
+.typing-cursor {
+  animation: blink 1.2s infinite;
+}
+
+.project {
+  width: 85%;
+  height: 30vh;
+  background-color: #242424;
+}
+
+@keyframes blink {
+  0%, 50% {display: none;}
+  51%, 100% {display: inline;}
+}
+
