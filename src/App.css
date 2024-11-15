@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-  background-color: #151515;
+  background-color: #1c1c1c;
   width: 100vw;
 }
 
@@ -22,9 +22,8 @@ body {
 
 #content {
   background-color: #242424;
-  min-height: 300vh;
   margin-top: 25vh;
-  width: 60vw;
+  width: 70vw;
   z-index: 1;
 }
 
@@ -36,10 +35,30 @@ body {
   animation: blink 1.2s infinite;
 }
 
+.float-in {
+  animation: floatIn 0.5s ease-out forwards;
+}
+
+.project-container {
+  margin: 75px 0px; 
+}
+
 .project {
+  box-sizing: border-box;
   width: 85%;
-  height: 30vh;
-  background-color: #242424;
+  background-color: #272727;
+
+  display: flex;
+
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-radius: 2rem;
+  
+}
+
+.project > img {
+  width: 50%;
+  margin: 30px;
+  grid-row: 1 / span 2;
 }
 
 @keyframes blink {
@@ -47,3 +66,8 @@ body {
   51%, 100% {display: inline;}
 }
 
+@keyframes floatIn {
+  0% {transform: translate(0, 10vh); opacity: 0;}
+
+  100% {transform: translate(0, 0); opacity: 1;}
+}

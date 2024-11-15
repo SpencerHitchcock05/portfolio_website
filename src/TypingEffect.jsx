@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-function TypingEffect({ text, speed = 100 }) {
+function TypingEffect({ text, speed = 150 }) {
     const [displayedText, setDisplayedText] = useState("");
     const [isInView, setIsInView] = useState(false);
     const ref = useRef();
@@ -16,7 +16,7 @@ function TypingEffect({ text, speed = 100 }) {
             }
           });
         },
-        { threshold: 0.1 } // Trigger when 10% of the element is in view
+        { threshold: 1 } // Trigger when 10% of the element is in view
       );
   
       if (ref.current) {
@@ -32,7 +32,7 @@ function TypingEffect({ text, speed = 100 }) {
       let index = 0;
       const interval = setInterval(() => {
         if (index < text.length) {
-          setDisplayedText((prev) => prev + text[index - 1]);
+          setDisplayedText(() => text.substring(0, index));
           speed = speed + (Math.random() * 90 - 45);
           index += 1;
         } else {

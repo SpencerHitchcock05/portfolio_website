@@ -20,7 +20,7 @@ function Head() {
     return (
         <>
             <div  id="head" className="position-absolute justify-content-center">
-                <img style={{transform: `translate(0px, ${(winScrollY / 20) - 50}%)`}} ref={headImg} id="head-img" src="../img/headImg.png" alt="head image" />
+                <img style={{transform: `translate(0px, ${(winScrollY / 30) - 50}%)`}} ref={headImg} id="head-img" src="../img/headImg.png" alt="head image" />
             </div>
         </>
     )

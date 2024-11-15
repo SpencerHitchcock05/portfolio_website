@@ -18,6 +18,11 @@ function Content() {
                 <div id="content" className="">
                     <h1 id="name-header" className="m-5">&gt;<TypingEffect text="Spencer" /></h1>
                     <Project />
+                    <Project />
+                    <Project />
+                    <Project />
+                    <Project />
+                    <Project />
                 </div>
             </div>
         </>
