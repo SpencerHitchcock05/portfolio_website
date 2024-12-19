@@ -1,5 +1,12 @@
+
+:root {
+  --main-bg-color : #1c1c1c;
+  --content-bg-color : #242424;
+  --text-color: #ffffff;
+} 
+
 * {
-  color: white;
+  color: var(--text-color);
 }
 
 body {
@@ -7,7 +14,7 @@ body {
 }
 
 #root {
-  background-color: #1c1c1c;
+  background-color: var(--main-bg-color);
   width: 100vw;
 }
 
@@ -20,9 +27,17 @@ body {
   transform: translate(0, -50%);
 }
 
+#profile-container {
+  width: 1000px;
+  height: 1000px;
+  background-color: red;
+
+  position: absolute;
+}
+
 #content {
-  background-color: #242424;
-  margin-top: 25vh;
+  background-color: var(--content-bg-color);
+  margin-top: 50vh;
   width: 70vw;
   z-index: 1;
 }

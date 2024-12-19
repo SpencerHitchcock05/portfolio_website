@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Head from './Head.jsx'
 import Content from './Content.jsx'
+import Profile from './Profile.jsx'
 
 function App() {
 
   return (
     <>
       <Head />
+      <Profile />
       <Content />
     </>
   )
