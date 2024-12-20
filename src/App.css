@@ -1,6 +1,6 @@
 
 :root {
-  --main-bg-color : #1c1c1c;
+  --main-bg-color : #030303;
   --content-bg-color : #242424;
   --text-color: #ffffff;
 } 
@@ -20,6 +20,31 @@ body {
 
 #head {
   z-index: 0;
+  background-color: red;
+}
+
+.dot-radius {
+  background-color: none;
+  width: 100px;
+  height: 100px;
+  /* margin: 100px; */
+  border-radius: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  /* border: 1px solid white; */
+}
+
+.dot {
+  background-color: #242424;
+  width: 5px;
+  height: 5px;
+  border-radius: 1000px;
+  transition: .5s ease-out;
 }
 
 #head-img {

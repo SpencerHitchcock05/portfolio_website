@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react"
+import Dot from "./Dot.jsx"
 
 
 function Head() {
@@ -17,10 +18,19 @@ function Head() {
         }
     }, [])
 
+    const nums = []
+
+    for (let i = 0; i < 512; i++) {
+        nums.push(i);
+    }
+
     return (
         <>
             <div  id="head" className="position-absolute justify-content-center">
-                <img style={{transform: `translate(0px, ${(winScrollY / 30) - 50}%)`}} ref={headImg} id="head-img" src="../img/headImg.png" alt="head image" />
+                {/* <img style={{transform: `translate(0px, ${(winScrollY / 30) - 50}%)`}} ref={headImg} id="head-img" src="../img/headImg.png" alt="head image" /> */}
+                {nums.map((data) => {
+                    return <Dot key={data} data={{x: (data % 32) * 3, y: Math.floor(data / 32) * 6}}/>
+                })}  
             </div>
         </>
     )
