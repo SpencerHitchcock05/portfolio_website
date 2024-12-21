@@ -31,6 +31,12 @@ function Head() {
                 {nums.map((data) => {
                     return <Dot key={data} data={{x: (data % 32) * 3, y: Math.floor(data / 32) * 6}}/>
                 })}  
+                <div id="head-name">
+                    <div>Spencer</div>
+                    <div id="name-underline"></div>
+                </div>
+                <div id="head-gradient"></div>
+
             </div>
         </>
     )
