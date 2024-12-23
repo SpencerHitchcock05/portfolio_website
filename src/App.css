@@ -1,7 +1,7 @@
 
 :root {
   --main-bg-color : #030303;
-  --content-bg-color : #242424;
+  --content-bg-color : #444444;
   --text-color: #ffffff;
 } 
 
@@ -13,10 +13,22 @@ body {
   overflow-x: hidden;
 }
 
+
 #root {
   background-color: var(--main-bg-color);
   width: 100vw;
 }
+
+.graph {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  background: var(--main-bg-color);
+  background-image: radial-gradient(var(--content-bg-color) 2.5px, transparent 0);
+  background-size: 3vw 3vw;
+  /* background-position: -19px -19px; */
+}
+
 
 nav {
   height: 10vh;
@@ -33,7 +45,7 @@ nav {
   font-size: 1.2rem;
   font-family: monospace;
 
-  border-bottom: 1px solid #242424;
+  border-bottom: 1px solid var(--content-bg-color);
 }
 
 nav > a:link {
@@ -78,7 +90,7 @@ nav > a:hover {
 }
 
 .dot {
-  background-color: #242424;
+  background-color: var(--content-bg-color);
   width: 5px;
   height: 5px;
   border-radius: 1000px;
@@ -103,7 +115,7 @@ nav > a:hover {
   font-size: 7rem;
   top: 55vh;
   left: 15vw; 
-  animation: 3s slideIn ease;
+  animation: 3s nameSlideIn ease;
   font-family: monospace;
 
   cursor: default;
@@ -127,7 +139,7 @@ nav > a:hover {
   left: 62.5vw;
   top: 22vh;
   padding: 3px;
-  background-image: linear-gradient(180deg, black 75%, #ffffff);
+  background-image: linear-gradient(180deg, black 75%, #ffffff 100%);
   animation: floatIn 5s;
 }
 
@@ -139,14 +151,20 @@ nav > a:hover {
 }
 
 #content {
-  background-color: var(--content-bg-color);
-  margin-top: 100vh;
-  width: 70vw;
+  background-color: var(--main-bg-color);
+  margin-top: 105vh;
+  width: 100vw;
   z-index: 1;
 }
 
 #name-header {
   font-size: 5rem;
+  margin-left: 5vw;
+  text-decoration: underline;
+}
+
+.slide-in {
+  animation: 2s slideIn ease;
 }
 
 .typing-cursor {
@@ -154,36 +172,43 @@ nav > a:hover {
 }
 
 .float-in {
-  animation: floatIn 0.5s ease-out forwards;
+  animation: floatIn 1s ease-out forwards;
 }
 
 .project-container {
-  margin: 75px 0px; 
+  margin: 6% 0; 
 }
 
 .project {
   box-sizing: border-box;
-  width: 85%;
-  background-color: #272727;
-
+  width: 80%;
   display: flex;
 
+
+  /* background-color: var(--content-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1); 
   border-radius: 2rem;
-  
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.35);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.35); */
 
-  transition: ease-out 2s;
+  border: 1px solid #a0a0a0;
+
+  box-shadow: 4px 4px white;
+
+  transition: ease-out 0.5s;
 }
 
+
+
 .project > img {
-  width: 50%;
+  width: 40%;
   margin: 30px;
   grid-row: 1 / span 2;
 }
 
 .hover-shadow:hover {
-  box-shadow: 0 .5rem 1rem rgba(255,255,255,.35);
+  /* box-shadow: 0 .5rem 1rem rgba(255,255,255,.35); */
+  box-shadow: 10px 10px white;
+
 }
 
 @keyframes blink {
@@ -204,6 +229,12 @@ nav > a:hover {
 }
 
 @keyframes slideIn {
+  0% {margin-left: -30vw;}
+
+  100% {margin-left: 5vw;}
+}
+
+@keyframes nameSlideIn {
   0% {left: -50rem;}
 
   100% {left: 15vw;}

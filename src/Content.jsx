@@ -1,14 +1,30 @@
 import { useState, useRef, useEffect } from "react"
 import Project from "./Project.jsx" 
 import TypingEffect from "./TypingEffect.jsx"
+import HeaderText from "./HeaderText.jsx"
 
 
 
 function Content() {
 
+    const [inView, setInView] = useState(false);
+    const header = useRef();
 
     useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setInView(true)
+                    observer.disconnect()
+                }
+            })
+        })
 
+        if (header.current) {
+            observer.observe(ReferenceError.current)
+        }
+
+        return observer.disconnect()
     })
     
 
@@ -16,7 +32,7 @@ function Content() {
         <>
             <div className="d-flex justify-content-center w-100">
                 <div id="content" className="">
-                    <h1 id="name-header" className="m-5">&gt;<TypingEffect text="Spencer" /></h1>
+                    <HeaderText />
                     <Project />
                     <Project />
                     <Project />
