@@ -30,7 +30,7 @@ function Project(title, text, image) {
 
     return (
         <>
-            <div ref={ref} className={`project-container d-flex justify-content-center ${isInView? "opacity-1 float-in" : "opacity-0"}`}>
+            <div ref={ref} className={`project-container d-flex justify-content-center graph ${isInView? "opacity-1 float-in" : "opacity-0"}`}>
                 <div className="project hover-shadow">
                     <img src="../img/chatImg.png"/>
                     <div className="m-3"> 
