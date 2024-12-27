@@ -1,10 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import TypingEffect from "./TypingEffect.jsx";
 
-function Project(title, text, image) {
+function Project(props) {
+
+    const data = props.data;
+
+    console.log(data)
 
     const [isInView, setIsInView] = useState(false);
     const ref = useRef();
+
+    
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -34,8 +40,9 @@ function Project(title, text, image) {
                 <div className="project hover-shadow">
                     <img src="../img/chatImg.png"/>
                     <div className="m-3"> 
-                        <h2>&gt;<TypingEffect text="cd chat-app" speed={200}/></h2>
-                        <p>project details this is what my Porject is about</p>
+                        <h2>&gt;<TypingEffect text={`cd ${data.title}`} speed={200}/></h2>
+                        <p>{data.description}</p>
+                        <p>{data.about}</p>
                     </div>
                 </div>
                 

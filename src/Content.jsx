@@ -3,13 +3,14 @@ import Project from "./Project.jsx"
 import TypingEffect from "./TypingEffect.jsx"
 import HeaderText from "./HeaderText.jsx"
 import TextBox from "./TextBox.jsx"
-
+import projectJSON from "./projects.json"
 
 
 function Content() {
 
     const [inView, setInView] = useState(false);
     const header = useRef();
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
@@ -28,6 +29,7 @@ function Content() {
         return observer.disconnect()
     })
     
+    let key = 0;
 
     return (
         <>
@@ -35,12 +37,10 @@ function Content() {
                 <div id="content" className="">
                     <TextBox />
                     <HeaderText />
-                    <Project />
-                    <Project />
-                    <Project />
-                    <Project />
-                    <Project />
-                    <Project />
+                    {projectJSON.map((data) => {
+                        key++;
+                        return <Project key={key} data={{title: data.title, description: data.description, about: data.about}}/>
+                    })}
                 </div>
             </div>
         </>

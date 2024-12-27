@@ -5,12 +5,21 @@
   --text-color: #ffffff;
 } 
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   color: var(--text-color);
+  font-family: monospace;
 }
 
 body {
   overflow-x: hidden;
+}
+
+a {
+  z-index: 5;
 }
 
 
@@ -26,7 +35,7 @@ body {
   background-size: 3vw 3vw;
 }
 
-.graph:after {
+/* .graph:after {
   content: "";
   display: block;
   width: 100%;
@@ -38,7 +47,7 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 0; left: 0;
-}
+} */
 
 
 
@@ -58,6 +67,10 @@ nav {
   font-family: monospace;
 
   border-bottom: 1px solid var(--content-bg-color);
+}
+
+nav > a {
+  margin: 9%;
 }
 
 nav > a:link {
@@ -158,11 +171,13 @@ nav > a:hover {
   background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 13.99%, transparent 14%, transparent 21%, #ffffff 21.01%, #ffffff 100%);
   position: absolute;
   bottom: 3.35vh;
-  animation: underline-fill 5s ;
+  animation: underline-fill 5s;
 }
 
 #profile-container {
+  min-width: 200px;
   width: 22vw;
+  min-height: 200px;
   height: 22vw;
   background-color: var(--main-bg-color);
   border-radius: 1000px;
@@ -177,7 +192,9 @@ nav > a:hover {
 #profile-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: inherit;
+  overflow: hidden;
   /* display: none; */
 }
 
