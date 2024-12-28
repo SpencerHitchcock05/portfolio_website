@@ -1,17 +1,14 @@
 [
     {
-        "title" : "Portfolio Website",
-        "description": "this is my porject",
-        "about": "i made this"
-    },
-    {
-        "title" : "chat-app",
-        "description": "this is my porject",
-        "about": "i made this"
+        "title" : "Simple Chat",
+        "description": "A simple chat application with a Python back-end that uses Flask, SocketIO and SQLAlchemy. Users can create new accounts and search for existing accounts to message. Messaging happens asynchronously using web sockets to update both users displays. All accounts, messages, read/unread message status, etc. are stored in a SQL database using SQLAlchemy.",
+        "about": "I made this to because I wanted to become more familiar with using python in a practical way. It was the first language I learned but I never really got to use it for anything interesting. I thought a chat application would be fun to make, and fun to experiment with with friends.",
+        "img": "chatImg.png"
     },
     {
         "title" : "The One Website",
-        "description": "this is my porject",
-        "about": "i made this"
+        "description": "This is a web app that displays an interactive map of Middle-earth. The user is presented a map of Middle-earth where they can click on one of the locations and see information about that location. There is also a search bar at the top of the page that allows the user search for any location, character or other information. The front-end of this application is done in React, and the accessing of information is done through fetching from an express server that scrapes various Lord of the Rings wikis",
+        "about": "This was made as a passion project I made in high school after I had read The Lord of the Rings. This was the first large react application I had made and my first experience with express servers.",
+        "img": "oneWebsiteImg.png"
     }
 ]

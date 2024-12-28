@@ -39,7 +39,7 @@ function Content() {
                     <HeaderText />
                     {projectJSON.map((data) => {
                         key++;
-                        return <Project key={key} data={{title: data.title, description: data.description, about: data.about}}/>
+                        return <Project key={key} data={{data}}/>
                     })}
                 </div>
             </div>
