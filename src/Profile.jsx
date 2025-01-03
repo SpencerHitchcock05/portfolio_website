@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-
+import profilePicture from "./assets/me.jpg";
 
 function Profile() {
 
@@ -31,7 +31,7 @@ function Profile() {
     return (
         <>
         <div ref={ref} style={{backgroundImage : `linear-gradient(${degree}deg, black, #ffffff)`}} id="profile-container" className="d-flex justify-content-center align-items-center">
-            <img id="profile-img" src="../img/me.jpg" alt="" />
+            <img id="profile-img" src={profilePicture} alt="" />
         </div>
         </>
     )

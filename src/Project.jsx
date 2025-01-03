@@ -38,7 +38,7 @@ function Project(props) {
         <>
             <div ref={ref} className={`project-container d-flex justify-content-center graph ${isInView? "opacity-1 float-in" : "opacity-0"}`}>
                 <div className="project hover-shadow">
-                    <img src={`../img/${data.img}`}/>
+                    <img src={new URL(`./assets/${data.img}`, import.meta.url).href}/>
                     <div className="m-3"> 
                         <h2>&gt;<TypingEffect text={`cd ${data.title}`} speed={200}/></h2>
                         <p>{data.description}</p>
