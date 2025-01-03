@@ -1,9 +1,9 @@
 {
   "name": "portfolio_website",
+  "homepage": "https://SpencerHitchcock05.github.io/portfolio_website/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://SpencerHitchcock05.github.io",
   "scripts": {
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d dist",
