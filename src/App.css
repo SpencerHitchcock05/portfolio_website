@@ -54,10 +54,9 @@ a {
 nav {
   height: 10vh;
   width: 100%;
-  background-color: red;
   position: absolute;
   z-index: 1;
-  background-color: black;
+  background-color: red;
 
   display: flex;
   justify-content: space-around;
