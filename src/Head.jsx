@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react"
 import Dot from "./Dot.jsx"
+import Profile from "./Profile.jsx"
 
 
 function Head() {
@@ -30,12 +31,16 @@ function Head() {
                 {/* <img style={{transform: `translate(0px, ${(winScrollY / 30) - 50}%)`}} ref={headImg} id="head-img" src="../img/headImg.png" alt="head image" /> */}
                 {nums.map((data) => {
                     return <Dot key={data} data={{x: (data % 32) * 3, y: Math.floor(data / 32) * 6}}/>
-                })}  
-                <div id="head-name">
-                    <div>Spencer</div>
-                    <div id="name-underline"></div>
+                })}
+                <div id="head-info">  
+                    <Profile />
+                    <div id="head-name">
+                        <div>Spencer</div>
+                        <div id="name-underline"></div>
+                    </div>
                 </div>
                 <div id="head-gradient"></div>
+                
 
             </div>
         </>

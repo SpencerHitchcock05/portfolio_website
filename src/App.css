@@ -70,9 +70,7 @@ nav {
   border-bottom: 1px solid var(--content-bg-color);
 }
 
-nav > a {
-  margin: 0%;
-}
+
 
 nav > a:link {
   color: white
@@ -98,6 +96,8 @@ nav > a:hover {
   width: 100%;
   height: 100%;
 }
+
+
 
 .dot-radius {
   background-color: none;
@@ -161,10 +161,13 @@ nav > a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
   
 }
 
+.text-text {
+  width: 75%;
+  font-size: 1.5rem;
+}
 
 #name-underline {
   width: 100%;
@@ -176,9 +179,9 @@ nav > a:hover {
 }
 
 #profile-container {
-  min-width: 300px;
+  min-width: 400px;
   width: 22vw;
-  min-height: 300px;
+  min-height: 400px;
   height: 22vw;
   background-color: var(--main-bg-color);
   border-radius: 1000px;
@@ -269,6 +272,66 @@ nav > a:hover {
 
 }
 
+@media only screen and (max-width: 800px) {
+
+  nav > a {
+    display: none;
+  }
+
+  #profile-container {
+    left: 0px;
+    position: relative;
+    top: 0;
+  }
+
+  #head-name {
+    font-size: 4rem;
+    position: relative;
+    top: 0;
+    margin-right: 27vw;
+  }
+
+  #name-underline {
+    position: relative;
+    width: 100%;
+  }
+
+  #head-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40vw;
+
+    box-sizing: border-box;
+  }
+
+  #name-underline {
+    bottom: 1.8vh;
+    height: 6px;
+  }
+
+  .text-text {
+    width: 100%;
+  }
+
+  #name-header {
+    font-size: 4rem;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project > img {
+    width: 90%;
+    margin: 5%;
+  }
+  
+}
+
 @keyframes blink {
   0%, 50% {display: none;}
   51%, 100% {display: inline;}
@@ -298,20 +361,3 @@ nav > a:hover {
   100% {left: 15vw;}
 }
 
-@keyframes moveLiquid {
-  0%, 100% {
-    clip-path: path(
-      'M100,0 C130,20 170,40 190,70 C200,100 190,130 170,150 C150,170 120,190 100,200 C80,190 50,170 30,150 C10,130 0,100 10,70 C30,40 70,20 100,0'
-    );
-  }
-  25% {
-    clip-path: path(
-      'M100,0 C120,30 160,50 180,80 C200,110 180,140 160,160 C140,180 110,190 90,200 C70,190 40,160 20,140 C10,110 20,90 40,70 C70,50 80,20 100,0'
-    );
-  }
-  50% {
-    clip-path: path(
-      'M100,0 C140,20 1900 80 % lower.'
-    );
-  }
-}

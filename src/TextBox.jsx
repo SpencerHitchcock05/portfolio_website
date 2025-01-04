@@ -31,7 +31,7 @@ function TextBox(props) {
         <>
             <div ref={ref} className={`text-box-container ${isInView? "opacity-1 float-in" : "opacity-0"} d-flex justify-content-center align-items-center`}>
                 <div className="text-box graph">
-                    <div className="w-75 text-center p-5 ">                    
+                    <div className=" text-center p-5 text-text">                    
                         I am currently enrolled at Dalhousie University taking my second year of computer science. I am also actively looking for coop/internship 
                         opportunities for the summer of 2025.
                         <br /><br />
