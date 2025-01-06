@@ -7,8 +7,20 @@
     },
     {
         "title" : "The One Website",
-        "description": "This is a web app that displays an interactive map of Middle-earth. The user is presented a map of Middle-earth where they can click on one of the locations and see information about that location. There is also a search bar at the top of the page that allows the user search for any location, character or other information. The front-end of this application is done in React, and the accessing of information is done through fetching from an express server that scrapes various Lord of the Rings wikis",
+        "description": "This is a web app that displays an interactive map of Middle-earth. The user is presented a map of Middle-earth where they can click on one of the locations and see information about that location. There is also a search bar at the top of the page that allows the user search for any location, character or other information. The front-end of this application is done in React, and the accessing of information is done through fetching from an express server that scrapes various Lord of the Rings wikis.",
         "about": "This was made as a passion project I made in high school after I had read The Lord of the Rings. This was the first large react application I had made and my first experience with express servers.",
         "img": "oneWebsiteImg.png"
+    },
+    {
+        "title" : "Sorting Website",
+        "description": "A website that demonstrates how various sorting algorithms work in real time. The user has the ability to change the amount of items being sorted, the sorting algorithm to be used in the animation, and the speed of the animation. This project was made in vanilla javascript, html, and css.",
+        "about": "This website was one of my first projects and I made it to learn how sorting algorithms worked. I also wanted to create a website that was interactive, as all that I had created up until this project had been static websites with no interactivity.",
+        "img": "sortingImg.png"
+    },
+    {
+        "title": "Portfolio Website",
+        "description": "It's what you're currently looking at! This portfolio website demonstrates my skills as a programmer and puts the various projects I have made on display for you to see. This website was made using react, javascript, html, css, vite and bootstrap.",
+        "about": "This website was made to show off my abilities as a programmer and give people a quick and easy way to get to know a little about me and what I've been working on.",
+        "img": "portfolioImg.png"
     }
 ]
